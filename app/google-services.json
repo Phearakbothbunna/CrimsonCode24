@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "373169122229",
+    "project_id": "coug-connect",
+    "storage_bucket": "coug-connect.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:373169122229:android:692c9dcc8d3e635a7f47fc",
+        "android_client_info": {
+          "package_name": "com.example.coug_connect"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBF-2Jjzraw1O2G82ccrI4-0ge0lXY0UOo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
