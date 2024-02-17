@@ -12,5 +12,7 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "U-Connect"
-include ':app'
+
+rootProject.name = "Coug-Connect"
+include(":app")
+ 
