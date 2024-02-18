@@ -6,24 +6,24 @@
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="409dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="0dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="20dp"
-        app:cardBackgroundColor="@color/gray"
-        app:cardCornerRadius="20dp"
         android:elevation="8dp"
+        app:cardBackgroundColor="@color/crimson"
+        app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/row_id"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/pfp_org"
@@ -56,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:text="TextView"
-                android:textColor="@color/crimson"
+                android:textColor="@color/gray"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/pfp_org"
                 app:layout_constraintTop_toBottomOf="@id/orgTileName" />
@@ -67,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="TextView"
-                android:textColor="@color/crimson"
+                android:textColor="@color/gray"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/tileCategory1"
                 app:layout_constraintTop_toBottomOf="@id/orgTileName" />
