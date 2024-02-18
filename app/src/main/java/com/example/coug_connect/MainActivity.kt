@@ -15,6 +15,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.coug_connect.ui.theme.CougConnectTheme
 
 import com.google.firebase.FirebaseApp
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 
 class MainActivity : ComponentActivity() {
@@ -26,14 +28,15 @@ class MainActivity : ComponentActivity() {
             CougConnectTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-                    Greeting("Android")
+                    //Greeting("Android")
                     // Write a message to the database
 //                    val database = Firebase.database
 //                    val myRef = database.getReference("message")
-                    UsersDatabase.writeDataToDatabase()
-                    SubscriptionsDatabase.writeOrganizerDataToDatabase()
-                    SubscriptionsDatabase.writeEventsDataToDatabase()
-                    //myRef.setValue("Hello, World!")
+//                    UsersDatabase.writeDataToDatabase()
+//
+//                    SubscriptionsDatabase.writeOrganizerDataToDatabase()
+//                    SubscriptionsDatabase.writeEventsDataToDatabase()
+//                    //myRef.setValue("Hello, World!")
                 }
             }
         }
@@ -70,7 +73,7 @@ class MainActivity : ComponentActivity() {
 //}
 
 
-@Composable
+/*@Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
         text = "Hello $name!",
@@ -85,6 +88,6 @@ fun GreetingPreview() {
     CougConnectTheme {
         Greeting("Android")
     }
-}
+}*/
 
 
