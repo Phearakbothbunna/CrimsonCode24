@@ -20,6 +20,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         FirebaseApp.initializeApp(this)
+        UsersDatabase.populateUsers()
+        OrganizersDatabase.populateOrganizers()
+        EventsDatabase.populateEvents()
 //        setContent {
 //            CougConnectTheme {
 //                // A surface container using the 'background' color from the theme
@@ -71,22 +74,5 @@ class MainActivity : ComponentActivity() {
 
 //}
 
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    CougConnectTheme {
-        Greeting("Android")
-    }
-}
 
 

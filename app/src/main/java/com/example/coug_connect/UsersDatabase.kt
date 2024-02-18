@@ -15,7 +15,7 @@ object UsersDatabase {
         val uid = FirebaseAuth.getInstance().currentUser!!.uid
 
 
-        val userData = UserData(name, email, phone)
+        val userData = User(name, email, phone)
         usersRef.child(uid).setValue(userData)
 
 
@@ -23,9 +23,32 @@ object UsersDatabase {
     }
 
 
-    data class UserData(val name: String,
-                        val email: String,
-                        val password: String,
-                        val phone: Int = 0,
-                        val subscription: Map<String, Boolean> = emptyMap())
+    data class User(val name: String = "",
+                    val email: String = "",
+                    val password: String = "",
+                    val phone: Int = 0,
+                    val subscription: Map<String, Boolean> = emptyMap(),
+                    val events: Map<String, Boolean> = emptyMap())
+
+    fun populateUsers() {
+        val user1 = User("John", "john@example.com", "adbcd1234", 1233, mapOf("interest1" to true, "interest2" to true), mapOf("eventId1" to true))
+
+        //val userId1 = usersRef.push().key ?: UUID.randomUUID().toString()
+
+        usersRef.child("John").setValue(user1)
+
+        val user2 = User("Aditya", "aditya@example.com", "adbcd1234", 1233, mapOf("interest1" to true, "interest2" to true), mapOf("eventId1" to true))
+
+        //val userId1 = usersRef.push().key ?: UUID.randomUUID().toString()
+
+        usersRef.child("Aditya").setValue(user2)
+
+        val user3 = User("Both", "both@example.com", "adbcd1234", 1233, mapOf("interest1" to true, "interest2" to true), mapOf("eventId1" to true))
+
+        //val userId1 = usersRef.push().key ?: UUID.randomUUID().toString()
+
+        usersRef.child("Both").setValue(user1)
+
+    }
+
 }
