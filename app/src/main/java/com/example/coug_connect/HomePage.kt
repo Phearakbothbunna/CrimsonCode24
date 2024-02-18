@@ -3,6 +3,7 @@ package com.example.coug_connect
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.ContactsContract.CommonDataKinds.Organization
 import androidx.activity.ComponentActivity
 import androidx.drawerlayout.widget.DrawerLayout;
 import android.view.Gravity
@@ -27,6 +28,13 @@ class HomePage : ComponentActivity() {
 
         btn_profile.setOnClickListener {
             val intent = Intent(this, Profile::class.java)
+            startActivity(intent)
+        }
+
+        val OrgButton = findViewById<Button>(R.id.btn_org);
+
+        OrgButton.setOnClickListener {
+            val intent = Intent(this, OrganizationsActivity::class.java)
             startActivity(intent)
         }
 

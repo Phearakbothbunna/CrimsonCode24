@@ -9,4 +9,21 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    
+    <string-array name="my_dummy_org_list">
+        <item>ACM</item>
+        <item>Alpha Beta Gamma</item>
+        <item>Cross Country</item>
+        <item>Cricket</item>
+        <item>Esports and Gaming</item>
+        <item>Fencing</item>
+        <item>Golf</item>
+        <item>Horticulture</item>
+        <item>International Students Center</item>
+        <item>Language Club</item>
+        <item>Music Club</item>
+        <item>Racing</item>
+        <item>Soccer</item>
+    </string-array>
+
 </resources>
