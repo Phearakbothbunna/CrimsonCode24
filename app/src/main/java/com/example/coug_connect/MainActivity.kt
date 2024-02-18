@@ -1,8 +1,6 @@
 package com.example.coug_connect
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -22,21 +20,25 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         FirebaseApp.initializeApp(this)
-        setContent {
-            CougConnectTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-                    Greeting("Android")
-                    // Write a message to the database
-//                    val database = Firebase.database
-//                    val myRef = database.getReference("message")
-                    UsersDatabase.writeDataToDatabase()
-                    SubscriptionsDatabase.writeOrganizerDataToDatabase()
-                    SubscriptionsDatabase.writeEventsDataToDatabase()
-                    //myRef.setValue("Hello, World!")
-                }
-            }
-        }
+//        setContent {
+//            CougConnectTheme {
+//                // A surface container using the 'background' color from the theme
+//                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
+//                    Greeting("Android")
+//                    // Write a message to the database
+////                    val database = Firebase.database
+////                    val myRef = database.getReference("message")
+//                    val username = ""
+//                    val email = ""
+//                    val password = ""
+//                    val phone = ""
+//                    UsersDatabase.writeDataToDatabase(username, email, password, phone)
+//                    SubscriptionsDatabase.writeOrganizerDataToDatabase()
+//                    SubscriptionsDatabase.writeEventsDataToDatabase()
+//
+//                }
+//            }
+//        }
 
     }
 //    override fun onCreate(savedInstanceState: Bundle?) {
