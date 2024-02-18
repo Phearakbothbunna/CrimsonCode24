@@ -13,11 +13,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.coug_connect.ui.theme.CougConnectTheme
+import com.google.firebase.FirebaseApp
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_login)
     }
 //    override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,3 +52,39 @@ class MainActivity : ComponentActivity() {
 //        Greeting("Android")
 //    }
 //}
+
+        FirebaseApp.initializeApp(this)
+        setContent {
+            CougConnectTheme {
+                // A surface container using the 'background' color from the theme
+                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
+                    Greeting("Android")
+                    // Write a message to the database
+                    val database = Firebase.database
+                    val myRef = database.getReference("message")
+
+                    myRef.setValue("Hello, World!")
+                }
+            }
+        }
+    }
+
+}
+
+@Composable
+fun Greeting(name: String, modifier: Modifier = Modifier) {
+    Text(
+            text = "Hello $name!",
+            modifier = modifier
+    )
+
+}
+
+@Preview(showBackground = true)
+@Composable
+fun GreetingPreview() {
+    CougConnectTheme {
+        Greeting("Android")
+    }
+}
+
