@@ -1,6 +1,8 @@
 package com.example.coug_connect
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -14,9 +16,42 @@ import com.example.coug_connect.ui.theme.CougConnectTheme
 import com.google.firebase.FirebaseApp
 
 
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        setContentView(R.layout.activity_login)
+    }
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        setContent {
+//            CougConnectTheme {
+//                // A surface container using the 'background' color from the theme
+//                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
+//                    Greeting("Android")
+//                }
+//            }
+//        }
+//    }
+}
+
+//@Composable
+//fun Greeting(name: String, modifier: Modifier = Modifier) {
+//    Text(
+//            text = "Hello $name!",
+//            modifier = modifier
+//    )
+//}
+//
+//@Preview(showBackground = true)
+//@Composable
+//fun GreetingPreview() {
+//    CougConnectTheme {
+//        Greeting("Android")
+//    }
+//}
+
         FirebaseApp.initializeApp(this)
         setContent {
             CougConnectTheme {
@@ -56,3 +91,4 @@ fun GreetingPreview() {
         Greeting("Android")
     }
 }
+
