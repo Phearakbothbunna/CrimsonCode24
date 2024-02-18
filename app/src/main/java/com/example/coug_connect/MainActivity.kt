@@ -12,8 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.coug_connect.ui.theme.CougConnectTheme
 import com.google.firebase.FirebaseApp
-import com.google.firebase.database.ktx.database
-import com.google.firebase.ktx.Firebase
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,14 +24,19 @@ class MainActivity : ComponentActivity() {
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
                     Greeting("Android")
                     // Write a message to the database
-                    val database = Firebase.database
-                    val myRef = database.getReference("message")
-
-                    myRef.setValue("Hello, World!")
+//                    val database = Firebase.database
+//                    val myRef = database.getReference("message")
+                    UsersDatabase.writeDataToDatabase()
+                    SubscriptionsDatabase.writeOrganizerDataToDatabase()
+                    SubscriptionsDatabase.writeEventsDataToDatabase()
+                    //myRef.setValue("Hello, World!")
                 }
             }
         }
     }
+
+
+
 
 }
 
