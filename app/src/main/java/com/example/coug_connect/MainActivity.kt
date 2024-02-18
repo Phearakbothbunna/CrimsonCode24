@@ -15,11 +15,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.view.GravityCompat
 import com.example.coug_connect.ui.theme.CougConnectTheme
+import com.google.firebase.FirebaseApp
 
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        FirebaseApp.initializeApp(this)
         setContentView(R.layout.activity_login)
 
         val btn_homepage = findViewById<Button>(R.id.btn_homepage);
