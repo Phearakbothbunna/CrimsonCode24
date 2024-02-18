@@ -19,8 +19,7 @@ object SubscriptionsDatabase {
                       val RSVP: Boolean = false) // YES / NO
 
 
-
-    fun writeDataToDatabase() {
+    fun writeOrganizerDataToDatabase() {
         val database = Firebase.database
         val myRef = database.getReference("Subscriptions") // Assume "Subscriptions" as the main node
 
@@ -35,6 +34,23 @@ object SubscriptionsDatabase {
 
         myRef.child(organizerName).setValue(variab)
     }
+
+    fun writeEventsDataToDatabase() {
+        val database = Firebase.database
+        val myRef = database.getReference("Subscriptions/Events") // Assuming "Events" as the main node for events
+
+        // Example of writing data to the database
+        val eventName = "Event1" // Unique event ID
+        val variab = Events(
+            EventName = "Example Event",
+            DateTime = 1234567890, // Example timestamp
+            Description = "This is an example event description.",
+            RSVP = false // Example RSVP status
+        )
+
+        myRef.child(eventName).setValue(variab)
+    }
+
 
 
 }
