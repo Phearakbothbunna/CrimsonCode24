@@ -22,6 +22,9 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         FirebaseApp.initializeApp(this)
+        UsersDatabase.populateUsers()
+        OrganizersDatabase.populateOrganizers()
+        EventsDatabase.populateEvents()
         setContentView(R.layout.activity_login)
 
         val btn_homepage = findViewById<Button>(R.id.btn_homepage);

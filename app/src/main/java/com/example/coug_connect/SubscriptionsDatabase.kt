@@ -19,7 +19,7 @@ object SubscriptionsDatabase {
                       val RSVP: Boolean = false) // YES / NO
 
 
-    /*fun writeOrganizerDataToDatabase() {
+fun writeOrganizerDataToDatabase() {
         val database = Firebase.database
         val myRef = database.getReference("Subscriptions") // Assume "Subscriptions" as the main node
 
@@ -49,8 +49,10 @@ object SubscriptionsDatabase {
         )
 
         myRef.child(eventName).setValue(variab)
-    }*/
+    }
+
 
 
 
 }
+
