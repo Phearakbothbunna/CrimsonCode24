@@ -29,7 +29,7 @@ private lateinit var binding: ActivityLoginBinding
 
         val username = binding.username
         val password = binding.password
-        val login = binding.login
+//        val login = binding.login
         val loading = binding.loading
 
         loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
@@ -39,7 +39,7 @@ private lateinit var binding: ActivityLoginBinding
             val loginState = it ?: return@Observer
 
             // disable login button unless both username / password is valid
-            login.isEnabled = loginState.isDataValid
+//            login.isEnabled = loginState.isDataValid
 
             if (loginState.usernameError != null) {
                 username.error = getString(loginState.usernameError)
@@ -59,7 +59,7 @@ private lateinit var binding: ActivityLoginBinding
             if (loginResult.success != null) {
                 updateUiWithUser(loginResult.success)
             }
-            setResult(Activity.RESULT_OK)
+            setResult(RESULT_OK)
 
             //Complete and destroy login activity once successful
             finish()
@@ -91,10 +91,10 @@ private lateinit var binding: ActivityLoginBinding
                 false
             }
 
-            login.setOnClickListener {
-                loading.visibility = View.VISIBLE
-                loginViewModel.login(username.text.toString(), password.text.toString())
-            }
+//            login.setOnClickListener {
+//                loading.visibility = View.VISIBLE
+//                loginViewModel.login(username.text.toString(), password.text.toString())
+//            }
         }
     }
 
