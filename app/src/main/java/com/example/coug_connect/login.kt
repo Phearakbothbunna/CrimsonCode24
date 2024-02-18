@@ -27,18 +27,9 @@ class login : ComponentActivity() {
         val btn_registration = findViewById<TextView>(R.id.btn_register)
 
 //      For the username & password input field
-
         val enterUsername =  findViewById<EditText>(R.id.enterUsername)
         val password = findViewById<EditText>(R.id.password)
 
-
-        loginButton.setOnClickListener {
-            val username = enterUsername.text.toString()
-            val password = password.text.toString()
-        }
-//            val intent = Intent(this, HomePage::class.java)
-//            startActivity(intent)
-//        }
 
         btn_registration.setOnClickListener{
             val intent = Intent(this, registration::class.java)
@@ -54,12 +45,12 @@ class login : ComponentActivity() {
                     override fun onDataChange(dataSnapshot: DataSnapshot) {
                         val dbPassword = dataSnapshot.child("password").getValue(String::class.java)
                         if (dbPassword == password) {
-                            // Sign in success
+                            // Successfully signed in
                             val intent = Intent(this@login, HomePage::class.java)
                             startActivity(intent)
                         } else {
                             Toast.makeText(
-                                baseContext, "Authentication failed.",
+                                baseContext, "Authentication failed. Please try again",
                                 Toast.LENGTH_SHORT
                             ).show()
                         }
@@ -67,7 +58,7 @@ class login : ComponentActivity() {
 
                     override fun onCancelled(databaseError: DatabaseError) {
                         Toast.makeText(
-                            baseContext, "Error getting data",
+                            baseContext, "Error getting the data",
                             Toast.LENGTH_SHORT
                         ).show()
                     }
