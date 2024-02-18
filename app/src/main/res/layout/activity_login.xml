@@ -75,6 +75,7 @@
         android:textColor="#FFFFFF"
         android:textColorHint="#A8A8A8"
         app:layout_constraintEnd_toEndOf="@+id/enterUsername"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="@+id/enterUsername"
         app:layout_constraintTop_toBottomOf="@+id/enterUsername" />
 
