@@ -20,8 +20,23 @@ import com.google.firebase.FirebaseApp
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_login)
+        FirebaseApp.initializeApp(this)
+        setContent {
+            CougConnectTheme {
+                // A surface container using the 'background' color from the theme
+                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
+                    //Greeting("Android")
+                    // Write a message to the database
+//                    val database = Firebase.database
+//                    val myRef = database.getReference("message")
+                    UsersDatabase.writeDataToDatabase()
+                    SubscriptionsDatabase.writeOrganizerDataToDatabase()
+                    SubscriptionsDatabase.writeEventsDataToDatabase()
+                    //myRef.setValue("Hello, World!")
+                }
+            }
+        }
     }
 //    override fun onCreate(savedInstanceState: Bundle?) {
 //        super.onCreate(savedInstanceState)
@@ -52,43 +67,20 @@ class MainActivity : ComponentActivity() {
 //    }
 //}
 
-        FirebaseApp.initializeApp(this)
-        setContent {
-            CougConnectTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-                    Greeting("Android")
-                    // Write a message to the database
-//                    val database = Firebase.database
-//                    val myRef = database.getReference("message")
-                    UsersDatabase.writeDataToDatabase()
-                    SubscriptionsDatabase.writeOrganizerDataToDatabase()
-                    SubscriptionsDatabase.writeEventsDataToDatabase()
-                    //myRef.setValue("Hello, World!")
-                }
-            }
-        }
-    }
 
-
-
-
-}
-
-@Composable
+/*@Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
-            text = "Hello $name!",
-            modifier = modifier
+        text = "Hello $name!",
+        modifier = modifier
     )
 
-}
+}*/
 
-@Preview(showBackground = true)
+/*@Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     CougConnectTheme {
         Greeting("Android")
     }
-}
-
+}*/

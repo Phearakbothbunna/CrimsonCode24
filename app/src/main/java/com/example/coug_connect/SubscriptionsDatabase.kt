@@ -21,7 +21,7 @@ object SubscriptionsDatabase {
 
     fun writeOrganizerDataToDatabase() {
         val database = Firebase.database
-        val myRef = database.getReference("Subscriptions") // Assume "Subscriptions" as the main node
+        val myRef = database.getReference("Subscriptions/Organizer") // Assume "Subscriptions" as the main node
 
         // Example of writing data to the database
         val organizerName = "Organizer" // Unique organizer ID
