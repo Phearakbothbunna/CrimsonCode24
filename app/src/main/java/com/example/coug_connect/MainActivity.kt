@@ -27,6 +27,8 @@ class MainActivity : ComponentActivity() {
 //                    val database = Firebase.database
 //                    val myRef = database.getReference("message")
                     UsersDatabase.writeDataToDatabase()
+                    SubscriptionsDatabase.writeDataToDatabase()
+
                     //myRef.setValue("Hello, World!")
                 }
             }
