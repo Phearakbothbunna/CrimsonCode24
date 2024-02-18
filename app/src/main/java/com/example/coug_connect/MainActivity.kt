@@ -13,8 +13,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.coug_connect.ui.theme.CougConnectTheme
-import com.google.firebase.FirebaseApp
 
+import com.google.firebase.FirebaseApp
 
 
 class MainActivity : ComponentActivity() {
@@ -36,6 +36,7 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+        setContentView(R.layout.activity_login)
     }
 //    override fun onCreate(savedInstanceState: Bundle?) {
 //        super.onCreate(savedInstanceState)
@@ -64,6 +65,7 @@ class MainActivity : ComponentActivity() {
 //    CougConnectTheme {
 //        Greeting("Android")
 //    }
+
 //}
 
 
@@ -83,4 +85,5 @@ fun GreetingPreview() {
         Greeting("Android")
     }
 }
+
 
