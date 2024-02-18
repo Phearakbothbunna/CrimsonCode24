@@ -19,15 +19,6 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
-    // TESTING:
-        val button = findViewById<Button>(R.id.btn_testing)
-        button.setOnClickListener {
-            val intent = Intent(this, HomePage::class.java)
-            startActivity(intent)
-        }
-
-
     }
 //    override fun onCreate(savedInstanceState: Bundle?) {
 //        super.onCreate(savedInstanceState)
