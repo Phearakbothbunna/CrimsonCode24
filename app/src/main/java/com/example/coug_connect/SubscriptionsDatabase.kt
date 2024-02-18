@@ -7,9 +7,9 @@ object SubscriptionsDatabase {
 
     // List of all organizers
     data class Organizer(val Name: String = "",
-                             val Tag: String = "",
-                             val Subscribers: Map<String, Boolean> = emptyMap(),
-                             val Events: Map<String, Boolean> = emptyMap())
+                         val Tag: String = "",
+                         val Subscribers: Map<String, Boolean> = emptyMap(),
+                         val Events: Map<String, Boolean> = emptyMap())
 
 
 

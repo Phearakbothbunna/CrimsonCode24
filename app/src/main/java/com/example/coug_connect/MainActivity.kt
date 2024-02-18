@@ -20,6 +20,7 @@ import com.google.firebase.FirebaseApp
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_login)
         FirebaseApp.initializeApp(this)
         setContent {
             CougConnectTheme {
@@ -36,7 +37,7 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-        setContentView(R.layout.activity_login)
+
     }
 //    override fun onCreate(savedInstanceState: Bundle?) {
 //        super.onCreate(savedInstanceState)
