@@ -176,10 +176,13 @@
 
     <Button
         android:id="@+id/registerButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="155dp"
+        android:layout_height="47dp"
         android:layout_marginTop="32dp"
+        android:background="@drawable/buttonbg"
         android:text="Register"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/confirmPass"
         app:layout_constraintStart_toStartOf="@+id/confirmPass"
         app:layout_constraintTop_toBottomOf="@+id/confirmPass" />
@@ -190,6 +193,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="I already have an account"
+        android:textColor="#959595"
+        android:textSize="16sp"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="@+id/registerButton"
         app:layout_constraintStart_toStartOf="@+id/registerButton"
         app:layout_constraintTop_toBottomOf="@+id/registerButton" />
